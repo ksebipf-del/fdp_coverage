@@ -1,0 +1,834 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>FdpCoverageToolDockWidgetBase</class>
+ <widget class="QDockWidget" name="FdpCoverageToolDockWidgetBase">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>772</width>
+    <height>456</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>FDP Coverage</string>
+  </property>
+  <widget class="QWidget" name="dockWidgetContents">
+   <layout class="QGridLayout" name="gridLayout">
+    <item row="3" column="0">
+     <layout class="QVBoxLayout" name="verticalLayout">
+      <item>
+       <widget class="QTabWidget" name="tabUncovered">
+        <property name="currentIndex">
+         <number>1</number>
+        </property>
+        <widget class="QWidget" name="Daten">
+         <attribute name="title">
+          <string>Data upload</string>
+         </attribute>
+         <widget class="QPushButton" name="btnBrowseFdp">
+          <property name="geometry">
+           <rect>
+            <x>190</x>
+            <y>90</y>
+            <width>75</width>
+            <height>23</height>
+           </rect>
+          </property>
+          <property name="font">
+           <font>
+            <pointsize>8</pointsize>
+           </font>
+          </property>
+          <property name="text">
+           <string>Browse</string>
+          </property>
+         </widget>
+         <widget class="QPushButton" name="btnBrowseWorldpop">
+          <property name="geometry">
+           <rect>
+            <x>190</x>
+            <y>160</y>
+            <width>75</width>
+            <height>23</height>
+           </rect>
+          </property>
+          <property name="font">
+           <font>
+            <pointsize>8</pointsize>
+           </font>
+          </property>
+          <property name="text">
+           <string>Browse</string>
+          </property>
+         </widget>
+         <widget class="QPushButton" name="btnBrowseBoundary">
+          <property name="geometry">
+           <rect>
+            <x>190</x>
+            <y>210</y>
+            <width>75</width>
+            <height>23</height>
+           </rect>
+          </property>
+          <property name="font">
+           <font>
+            <pointsize>8</pointsize>
+           </font>
+          </property>
+          <property name="text">
+           <string>Browse</string>
+          </property>
+         </widget>
+         <widget class="QPushButton" name="btnLoadLayers">
+          <property name="geometry">
+           <rect>
+            <x>190</x>
+            <y>250</y>
+            <width>131</width>
+            <height>31</height>
+           </rect>
+          </property>
+          <property name="font">
+           <font>
+            <pointsize>10</pointsize>
+            <weight>75</weight>
+            <bold>true</bold>
+           </font>
+          </property>
+          <property name="text">
+           <string>Load all Layers</string>
+          </property>
+         </widget>
+         <widget class="QLineEdit" name="leFdpCsv">
+          <property name="geometry">
+           <rect>
+            <x>10</x>
+            <y>90</y>
+            <width>141</width>
+            <height>20</height>
+           </rect>
+          </property>
+          <property name="font">
+           <font>
+            <pointsize>8</pointsize>
+           </font>
+          </property>
+          <property name="text">
+           <string>Upload FDP GPS data</string>
+          </property>
+         </widget>
+         <widget class="QLineEdit" name="leWorldpop">
+          <property name="geometry">
+           <rect>
+            <x>10</x>
+            <y>160</y>
+            <width>141</width>
+            <height>20</height>
+           </rect>
+          </property>
+          <property name="font">
+           <font>
+            <pointsize>8</pointsize>
+           </font>
+          </property>
+          <property name="text">
+           <string>Upload population data</string>
+          </property>
+         </widget>
+         <widget class="QLineEdit" name="leBoundary">
+          <property name="geometry">
+           <rect>
+            <x>10</x>
+            <y>210</y>
+            <width>141</width>
+            <height>20</height>
+           </rect>
+          </property>
+          <property name="font">
+           <font>
+            <pointsize>8</pointsize>
+           </font>
+          </property>
+          <property name="text">
+           <string>Upload boundary data</string>
+          </property>
+         </widget>
+         <widget class="QLabel" name="label">
+          <property name="geometry">
+           <rect>
+            <x>10</x>
+            <y>20</y>
+            <width>441</width>
+            <height>16</height>
+           </rect>
+          </property>
+          <property name="font">
+           <font>
+            <pointsize>8</pointsize>
+           </font>
+          </property>
+          <property name="text">
+           <string>Note: please insert a base map (e.g. OpenStreet Map) first before uploading other data.</string>
+          </property>
+         </widget>
+         <widget class="QLabel" name="label_7">
+          <property name="geometry">
+           <rect>
+            <x>10</x>
+            <y>50</y>
+            <width>711</width>
+            <height>16</height>
+           </rect>
+          </property>
+          <property name="font">
+           <font>
+            <pointsize>8</pointsize>
+           </font>
+          </property>
+          <property name="text">
+           <string>Upload a CSV with your existing Final Distribution Points (FDP's)</string>
+          </property>
+         </widget>
+         <widget class="QLabel" name="label_8">
+          <property name="geometry">
+           <rect>
+            <x>10</x>
+            <y>120</y>
+            <width>711</width>
+            <height>16</height>
+           </rect>
+          </property>
+          <property name="font">
+           <font>
+            <pointsize>8</pointsize>
+           </font>
+          </property>
+          <property name="text">
+           <string>Upload the WorldPop file for your country / planning area in CSV Format. DON'T change the naming of the collumns.</string>
+          </property>
+         </widget>
+         <widget class="QLabel" name="label_9">
+          <property name="geometry">
+           <rect>
+            <x>10</x>
+            <y>190</y>
+            <width>711</width>
+            <height>16</height>
+           </rect>
+          </property>
+          <property name="font">
+           <font>
+            <pointsize>8</pointsize>
+           </font>
+          </property>
+          <property name="text">
+           <string>Upload a Shape File (.shp) with boundary data from your planning area / country.</string>
+          </property>
+         </widget>
+         <widget class="QLabel" name="label_10">
+          <property name="geometry">
+           <rect>
+            <x>10</x>
+            <y>30</y>
+            <width>421</width>
+            <height>16</height>
+           </rect>
+          </property>
+          <property name="font">
+           <font>
+            <pointsize>8</pointsize>
+           </font>
+          </property>
+          <property name="text">
+           <string>__________________________________________________________________________________________________________________________</string>
+          </property>
+         </widget>
+         <widget class="QLabel" name="label_15">
+          <property name="geometry">
+           <rect>
+            <x>10</x>
+            <y>70</y>
+            <width>711</width>
+            <height>16</height>
+           </rect>
+          </property>
+          <property name="font">
+           <font>
+            <pointsize>8</pointsize>
+           </font>
+          </property>
+          <property name="text">
+           <string>Make sure to have a collumn with the GPS tags named latitude and longitude.</string>
+          </property>
+         </widget>
+         <widget class="QLabel" name="label_16">
+          <property name="geometry">
+           <rect>
+            <x>10</x>
+            <y>140</y>
+            <width>711</width>
+            <height>16</height>
+           </rect>
+          </property>
+          <property name="font">
+           <font>
+            <pointsize>8</pointsize>
+           </font>
+          </property>
+          <property name="text">
+           <string>DON'T change the naming of the collumns.</string>
+          </property>
+         </widget>
+        </widget>
+        <widget class="QWidget" name="Buffer">
+         <attribute name="title">
+          <string>Buffer generation</string>
+         </attribute>
+         <widget class="QLabel" name="label_2">
+          <property name="geometry">
+           <rect>
+            <x>10</x>
+            <y>90</y>
+            <width>101</width>
+            <height>16</height>
+           </rect>
+          </property>
+          <property name="text">
+           <string>Buffer size in km:</string>
+          </property>
+         </widget>
+         <widget class="QgsSpinBox" name="sbBufferDistance">
+          <property name="geometry">
+           <rect>
+            <x>110</x>
+            <y>80</y>
+            <width>90</width>
+            <height>27</height>
+           </rect>
+          </property>
+          <property name="minimum">
+           <number>1</number>
+          </property>
+          <property name="maximum">
+           <number>50</number>
+          </property>
+          <property name="value">
+           <number>5</number>
+          </property>
+         </widget>
+         <widget class="QPushButton" name="btnCreateBuffer">
+          <property name="geometry">
+           <rect>
+            <x>10</x>
+            <y>130</y>
+            <width>221</width>
+            <height>23</height>
+           </rect>
+          </property>
+          <property name="text">
+           <string>Create buffer around uploaded points</string>
+          </property>
+         </widget>
+         <widget class="QLabel" name="label_11">
+          <property name="geometry">
+           <rect>
+            <x>10</x>
+            <y>20</y>
+            <width>631</width>
+            <height>16</height>
+           </rect>
+          </property>
+          <property name="text">
+           <string>The buffer will serve as a proxy for the maximal distance</string>
+          </property>
+         </widget>
+         <widget class="QLabel" name="label_19">
+          <property name="geometry">
+           <rect>
+            <x>10</x>
+            <y>40</y>
+            <width>631</width>
+            <height>16</height>
+           </rect>
+          </property>
+          <property name="text">
+           <string>a beneficiary is required to travel to reach your distribution point. </string>
+          </property>
+         </widget>
+        </widget>
+        <widget class="QWidget" name="tab">
+         <attribute name="title">
+          <string>Explore covered Area</string>
+         </attribute>
+         <widget class="QPushButton" name="btnAnalyzeUncovered">
+          <property name="geometry">
+           <rect>
+            <x>20</x>
+            <y>60</y>
+            <width>211</width>
+            <height>23</height>
+           </rect>
+          </property>
+          <property name="text">
+           <string>Run analysis for this planning area</string>
+          </property>
+         </widget>
+         <widget class="QLabel" name="label_3">
+          <property name="geometry">
+           <rect>
+            <x>20</x>
+            <y>100</y>
+            <width>181</width>
+            <height>16</height>
+           </rect>
+          </property>
+          <property name="text">
+           <string>Total population in planning area:</string>
+          </property>
+         </widget>
+         <widget class="QLineEdit" name="leTotalPop">
+          <property name="geometry">
+           <rect>
+            <x>280</x>
+            <y>90</y>
+            <width>113</width>
+            <height>20</height>
+           </rect>
+          </property>
+          <property name="readOnly">
+           <bool>true</bool>
+          </property>
+         </widget>
+         <widget class="QLabel" name="lblUncoveredPop">
+          <property name="geometry">
+           <rect>
+            <x>20</x>
+            <y>130</y>
+            <width>241</width>
+            <height>16</height>
+           </rect>
+          </property>
+          <property name="text">
+           <string>Population covered:</string>
+          </property>
+         </widget>
+         <widget class="QLineEdit" name="leCoveredPop">
+          <property name="geometry">
+           <rect>
+            <x>280</x>
+            <y>120</y>
+            <width>113</width>
+            <height>20</height>
+           </rect>
+          </property>
+          <property name="readOnly">
+           <bool>true</bool>
+          </property>
+         </widget>
+         <widget class="QLabel" name="lblPercentageUncovered">
+          <property name="geometry">
+           <rect>
+            <x>20</x>
+            <y>160</y>
+            <width>201</width>
+            <height>16</height>
+           </rect>
+          </property>
+          <property name="text">
+           <string>Percentage covered:</string>
+          </property>
+         </widget>
+         <widget class="QLineEdit" name="lblPercentageValue">
+          <property name="geometry">
+           <rect>
+            <x>280</x>
+            <y>160</y>
+            <width>113</width>
+            <height>20</height>
+           </rect>
+          </property>
+          <property name="font">
+           <font>
+            <pointsize>16</pointsize>
+            <weight>75</weight>
+            <bold>true</bold>
+           </font>
+          </property>
+          <property name="readOnly">
+           <bool>true</bool>
+          </property>
+         </widget>
+         <widget class="QPushButton" name="btnCreateHeatmap">
+          <property name="geometry">
+           <rect>
+            <x>10</x>
+            <y>230</y>
+            <width>171</width>
+            <height>23</height>
+           </rect>
+          </property>
+          <property name="text">
+           <string>Show population hotspots</string>
+          </property>
+         </widget>
+         <widget class="QLabel" name="label_12">
+          <property name="geometry">
+           <rect>
+            <x>20</x>
+            <y>10</y>
+            <width>631</width>
+            <height>16</height>
+           </rect>
+          </property>
+          <property name="text">
+           <string>Based on the buffers around your FDP's, we can now analyse the coverage rate</string>
+          </property>
+         </widget>
+         <widget class="QLabel" name="label_13">
+          <property name="geometry">
+           <rect>
+            <x>20</x>
+            <y>250</y>
+            <width>721</width>
+            <height>16</height>
+           </rect>
+          </property>
+          <property name="text">
+           <string/>
+          </property>
+         </widget>
+         <widget class="QTextBrowser" name="textBrowser">
+          <property name="geometry">
+           <rect>
+            <x>210</x>
+            <y>190</y>
+            <width>211</width>
+            <height>101</height>
+           </rect>
+          </property>
+          <property name="html">
+           <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'MS Shell Dlg 2'; font-size:8pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;br /&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;This button allows you to add a population density analysis to your layers. Is shows the 5% and 10% highest percentile of population in your planning area&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+          </property>
+         </widget>
+         <widget class="QLabel" name="label_17">
+          <property name="geometry">
+           <rect>
+            <x>20</x>
+            <y>30</y>
+            <width>631</width>
+            <height>16</height>
+           </rect>
+          </property>
+          <property name="text">
+           <string>for current FDP points in your plannung area:</string>
+          </property>
+         </widget>
+        </widget>
+        <widget class="QWidget" name="tab_2">
+         <attribute name="title">
+          <string>Relocate existing distribution points</string>
+         </attribute>
+         <widget class="QPushButton" name="btnOptimizePoints">
+          <property name="geometry">
+           <rect>
+            <x>20</x>
+            <y>80</y>
+            <width>151</width>
+            <height>23</height>
+           </rect>
+          </property>
+          <property name="text">
+           <string>Optimize points </string>
+          </property>
+         </widget>
+         <widget class="QLabel" name="lblUncoveredPop_2">
+          <property name="geometry">
+           <rect>
+            <x>20</x>
+            <y>190</y>
+            <width>241</width>
+            <height>16</height>
+           </rect>
+          </property>
+          <property name="text">
+           <string>Population covered (beyond your buffer):</string>
+          </property>
+         </widget>
+         <widget class="QLineEdit" name="leCoveredPop_opt">
+          <property name="geometry">
+           <rect>
+            <x>290</x>
+            <y>190</y>
+            <width>113</width>
+            <height>20</height>
+           </rect>
+          </property>
+          <property name="readOnly">
+           <bool>true</bool>
+          </property>
+         </widget>
+         <widget class="QLabel" name="label_4">
+          <property name="geometry">
+           <rect>
+            <x>20</x>
+            <y>150</y>
+            <width>181</width>
+            <height>16</height>
+           </rect>
+          </property>
+          <property name="text">
+           <string>Total population in planning area:</string>
+          </property>
+         </widget>
+         <widget class="QLineEdit" name="lblPercentageValue_opt">
+          <property name="geometry">
+           <rect>
+            <x>290</x>
+            <y>230</y>
+            <width>113</width>
+            <height>20</height>
+           </rect>
+          </property>
+          <property name="font">
+           <font>
+            <pointsize>16</pointsize>
+            <weight>75</weight>
+            <bold>true</bold>
+           </font>
+          </property>
+          <property name="readOnly">
+           <bool>true</bool>
+          </property>
+         </widget>
+         <widget class="QLabel" name="lblPercentageUncovered_2">
+          <property name="geometry">
+           <rect>
+            <x>20</x>
+            <y>230</y>
+            <width>201</width>
+            <height>16</height>
+           </rect>
+          </property>
+          <property name="text">
+           <string>Percentage covered:</string>
+          </property>
+         </widget>
+         <widget class="QLineEdit" name="leTotalPop_2">
+          <property name="geometry">
+           <rect>
+            <x>290</x>
+            <y>150</y>
+            <width>113</width>
+            <height>20</height>
+           </rect>
+          </property>
+          <property name="readOnly">
+           <bool>true</bool>
+          </property>
+         </widget>
+         <widget class="QLabel" name="label_14">
+          <property name="geometry">
+           <rect>
+            <x>20</x>
+            <y>20</y>
+            <width>341</width>
+            <height>16</height>
+           </rect>
+          </property>
+          <property name="text">
+           <string>The following button deploys a greedy algorithm to your analysis and</string>
+          </property>
+         </widget>
+         <widget class="QTextBrowser" name="textBrowser_2">
+          <property name="geometry">
+           <rect>
+            <x>200</x>
+            <y>70</y>
+            <width>201</width>
+            <height>51</height>
+           </rect>
+          </property>
+          <property name="html">
+           <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'MS Shell Dlg 2'; font-size:8pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Important: &lt;/span&gt;New points always need to be checked and validated on the ground.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+          </property>
+         </widget>
+         <widget class="QLabel" name="label_18">
+          <property name="geometry">
+           <rect>
+            <x>20</x>
+            <y>40</y>
+            <width>411</width>
+            <height>16</height>
+           </rect>
+          </property>
+          <property name="text">
+           <string>relocates some of uploaded distribution points to achieve a higher coverage.</string>
+          </property>
+         </widget>
+        </widget>
+        <widget class="QWidget" name="tab_3">
+         <attribute name="title">
+          <string>Add new distribution points</string>
+         </attribute>
+         <widget class="QPushButton" name="btnAddNewPoints">
+          <property name="geometry">
+           <rect>
+            <x>30</x>
+            <y>110</y>
+            <width>151</width>
+            <height>23</height>
+           </rect>
+          </property>
+          <property name="text">
+           <string>Add new points</string>
+          </property>
+         </widget>
+         <widget class="QLineEdit" name="lblPercentageValue_add">
+          <property name="geometry">
+           <rect>
+            <x>300</x>
+            <y>230</y>
+            <width>113</width>
+            <height>20</height>
+           </rect>
+          </property>
+          <property name="font">
+           <font>
+            <pointsize>16</pointsize>
+            <weight>75</weight>
+            <bold>true</bold>
+           </font>
+          </property>
+          <property name="readOnly">
+           <bool>true</bool>
+          </property>
+         </widget>
+         <widget class="QLabel" name="leCoveredPop_add_2">
+          <property name="geometry">
+           <rect>
+            <x>30</x>
+            <y>190</y>
+            <width>241</width>
+            <height>16</height>
+           </rect>
+          </property>
+          <property name="text">
+           <string>Population covered (after adding new points):</string>
+          </property>
+         </widget>
+         <widget class="QLabel" name="label_5">
+          <property name="geometry">
+           <rect>
+            <x>30</x>
+            <y>150</y>
+            <width>181</width>
+            <height>16</height>
+           </rect>
+          </property>
+          <property name="text">
+           <string>Total population in planning area:</string>
+          </property>
+         </widget>
+         <widget class="QLabel" name="lblPercentageUncovered_3">
+          <property name="geometry">
+           <rect>
+            <x>30</x>
+            <y>230</y>
+            <width>201</width>
+            <height>16</height>
+           </rect>
+          </property>
+          <property name="text">
+           <string>Percentage covered:</string>
+          </property>
+         </widget>
+         <widget class="QLineEdit" name="leCoveredPop_add">
+          <property name="geometry">
+           <rect>
+            <x>300</x>
+            <y>190</y>
+            <width>113</width>
+            <height>20</height>
+           </rect>
+          </property>
+          <property name="readOnly">
+           <bool>true</bool>
+          </property>
+         </widget>
+         <widget class="QLineEdit" name="leTotalPop_3">
+          <property name="geometry">
+           <rect>
+            <x>300</x>
+            <y>150</y>
+            <width>113</width>
+            <height>20</height>
+           </rect>
+          </property>
+          <property name="readOnly">
+           <bool>true</bool>
+          </property>
+         </widget>
+         <widget class="QLabel" name="label_6">
+          <property name="geometry">
+           <rect>
+            <x>30</x>
+            <y>40</y>
+            <width>221</width>
+            <height>16</height>
+           </rect>
+          </property>
+          <property name="text">
+           <string>Treshold of population you want to reach: </string>
+          </property>
+         </widget>
+         <widget class="QgsSpinBox" name="sbTreshold">
+          <property name="geometry">
+           <rect>
+            <x>250</x>
+            <y>30</y>
+            <width>90</width>
+            <height>27</height>
+           </rect>
+          </property>
+         </widget>
+         <widget class="QCheckBox" name="wenn">
+          <property name="geometry">
+           <rect>
+            <x>30</x>
+            <y>70</y>
+            <width>151</width>
+            <height>18</height>
+           </rect>
+          </property>
+          <property name="text">
+           <string>Maximize coverage</string>
+          </property>
+         </widget>
+        </widget>
+       </widget>
+      </item>
+     </layout>
+    </item>
+   </layout>
+  </widget>
+ </widget>
+ <customwidgets>
+  <customwidget>
+   <class>QgsSpinBox</class>
+   <extends>QSpinBox</extends>
+   <header>qgsspinbox.h</header>
+  </customwidget>
+ </customwidgets>
+ <resources/>
+ <connections/>
+</ui>
